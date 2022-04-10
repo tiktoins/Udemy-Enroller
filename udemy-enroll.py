@@ -10,53 +10,6 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 
 ################################################################
-print('''
-  .   . .    .  .    .  :8t..X% .    .  .    .  .    .  .    .  .    .  .       
-    .     .    .  .    : XXXXX8S  .    .  .    .  .    .  .    .  .    .  . .  .
-  .    .   .       .  ::@XXXXXX:.  .       .       .       .       .            
-     .   .   .  .    .;XXXXXXXX8%    .  .    .  .    .  .    .  .    .  .  . .  
-  .    .      .   .  8@XXXXXXXX8%. .   .  .   .  ;XS: .   .   .   .   .   .    .
-    .     . .   .   @@XXXXXXXXXX;    .      .  S:88@8 %    .    .   .   .    .  
-  .   .           .88XXXXXXXXXX:.  .    .     88XXXXXX@% .   .    .        .    
-    .   . .  . .  88XXXXXXXXXX88      .   .  t@XXXXXXXX%       .     . .  .   . 
-  .         .   .88@XXXXXXXXXX%; .  .   .   :.XXXXXXXXX:. . .    .          .   
-     . .  .    t.@XXXXXXXXXXX@8       .   .::XXXXXXXXXXX;     .    . .  .     . 
-  .          .SXXXXXXXXXXXXXXX:  . .       t@XXXXXXXXXX@;  .    .      .  .     
-    .  . . .:S8XXXXXXXXXXXXXXt .     .  . 88XXXXXXXXXXX@;    .    . .      . .  
-  .       tt8XXXXXXXXXXXXXXX@%    .   .  88@XXXXXX@XXX@8;.    .       .  .     .
-    . . :X8XXXXXXXXXXXXXXXXX   .    .   S8@XXXXX@      S;; .    . .     .   .   
-  .     XXXXXXXXXXXXXXXXXXX88    .     ttXXXXX8@@      . 8   .      . .   .   . 
-     .  ;.8XXX@@.@XXXXXXXXX%:  .   .  %%S @XX%@8%    .:;:%.    %%t;             
-  .    . .X%:S@.%8XXXXXXXXXt     .   ::   . 88S   .:;;ttt.8tt:t  .8%.  . .  .  .
-    .     .     XXXXXXXXXX88 .      :    .:. S   :;%%XS%Stt; S  .:: S:     .    
-  .   . .   .  :tXXXXXXXXXX;   .  .%8   :;t;;:::;tS%SXX@St%t;:::;tt.:SX.     .  
-    .     .   .%8@XXXXXXXX:. .   .:;  .:;%%S%t%%SXSSS%SXSXSSS%%%St%ttt.  .    . 
-  .    .       8@XXXXXXXXX.    . t:@8  :%%X%SS%SXSS%%SS%S%SSS%SS%SS:;:    . .   
-     .   .  . .XXXXXXXXXXX   . .88XX@@ :%S%%S%S% %%8@X8X @.t%%SS%%S.@   .      .
-  .    .       @XXXXXXXXXX%:  .X@XXX@  ;tSS%%S%S:        .% :%%S%%%tS;     .    
-    .     . .  8@XXXXXXXXX@:@8:8S      tSS%XS;.:    .  .   8 :t%S%St:8%::@.  .  
-  .   .  .     ;@XXXXXXXXXXXXXXX      :t%%S%%S.  .   .      8.tt%%SXt;:;;X;   . 
-    .       .  .;XXXXXXXXXXXXXX@     :t%SS%S%S .   .   . .  t .tSS%t%%%S%S;     
-  .    .  .     t%XXXXXXXXXXXXX@   .;t%X%%t%%t   .   .      tX:SSS%SXXS%S%: .  .
-     .   .   .  .;:8XXXXXXXXXXX88  :tS%%%SS%t8;.   .    .  .:.t%SSSS%%%St8:  .  
-  .    .   .       @%@XXXXXXX8 X.X@.% ;SS%%%S:t.      .    8 :%XS%%S%8.X8t.     
-    .        . .    :X@t::tX8t  .    t:tSSSSS%;@8.. .   .S   :%S%S@SX;.    .  . 
-  .   .  .       .            .      :X;tSXS%S%t: @;..:SX   .;%XXXS:8   .       
-    .   .  .  .   .       .      .   @ ;tSXSSXSt;:::::::;;;;t%X%%SS;8;    . . . 
-  .         .   .   . . .   .  .   .t  ;SS%tS%%S%t%%%%%%SSS%XSS%%%S%t8%.        
-     . .  .    .              .   ..XX.t%SS%%S%%SSSXS%SSXXS%%SSS%%SS:;%  .  .  .
-  .      .   .    . .  .  . .   .    t@tSS%X: .;tXXSSS%%t%S%:X.;%SX 8      .    
-    .  .   .    .       .          .  ;t  X.% 8;8;%X%%%%S .8t.8t  t%   . .   .  
-  .           .    . .    .  . .  .     .%.     % :t%%S%;:      .;             .
-    . . .  .    .      .            .        .   X:%XS%S%X      .  .  .  . .    
-  .       .  .    .  .   . .  . .     .  .  .  . X8@88@@8: . .   .     .     .  
---------------------------------------------------------------------------------
-                        |Udemy Enrolling Script|
-Coded by @CyberSudo.
-Don't forget to share it.
-Please wait everything will happen in few seconds
-Thank you for choosing this tool <3
-''')
 parser = argparse.ArgumentParser(description='Udemy Enrolling Script')
 parser.add_argument('Email', metavar='Email', type=str , help='Enter your email')
 parser.add_argument('Password', metavar='Password', type=str , help='Enter your password')
