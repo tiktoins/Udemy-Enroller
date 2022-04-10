@@ -8,14 +8,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
-
-################################################################
-parser = argparse.ArgumentParser(description='Udemy Enrolling Script')
-parser.add_argument('Email', metavar='Email', type=str , help='Enter your email')
-parser.add_argument('Password', metavar='Password', type=str , help='Enter your password')
-args = parser.parse_args()
-Email = args.Email
-Password = args.Password
 def  load_driver():
 	options = webdriver.FirefoxOptions()
 	
@@ -35,6 +27,14 @@ def  load_driver():
 		options=options)
 
 	return firefox_driver
+load_driver()
+################################################################
+parser = argparse.ArgumentParser(description='Udemy Enrolling Script')
+parser.add_argument('Email', metavar='Email', type=str , help='Enter your email')
+parser.add_argument('Password', metavar='Password', type=str , help='Enter your password')
+args = parser.parse_args()
+Email = args.Email
+Password = args.Password
 web = webdriver.Firefox()
 web.get("https://www.udemy.com/")
 web.implicitly_wait(5)
