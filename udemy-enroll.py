@@ -8,25 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
-def  load_driver():
-	options = webdriver.FirefoxOptions()
-	
-	# enable trace level for debugging 
-	options.log.level = "trace"
 
-	options.add_argument("-remote-debugging-port=9224")
-	options.add_argument("-headless")
-	options.add_argument("-disable-gpu")
-	options.add_argument("-no-sandbox")
-
-	binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
-
-	firefox_driver = webdriver.Firefox(
-		firefox_binary=binary,
-		executable_path=os.environ.get('GECKODRIVER_PATH'),
-		options=options)
-
-	return firefox_driver
 ################################################################
 print('''
   .   . .    .  .    .  :8t..X% .    .  .    .  .    .  .    .  .    .  .       
@@ -81,28 +63,25 @@ parser.add_argument('Password', metavar='Password', type=str , help='Enter your 
 args = parser.parse_args()
 Email = args.Email
 Password = args.Password
-def ask_user():
-    check = str(input("Did you delete your credit cards first?! (Y/N): ")).lower().strip()
-    try:
-        if check[0] == 'y':
-            print('Nice')
-            time.sleep(1)
-            print('Script starting...')
-            return True
-        elif check[0] == 'n':
-            print('Please delete your card first because the script does not differentiate between paid and free')
-            time.sleep(5)
-            exit()
-            return False
-        else:
-            print('Invalid Input')
-            return ask_user()
-    except Exception as error:
-        print("Please enter valid inputs")
-        print(error)
-        return ask_user()
-ask_user()
-web = webdriver.Firefox()
+def  load_driver():
+	options = webdriver.FirefoxOptions()
+	
+	# enable trace level for debugging 
+	options.log.level = "trace"
+
+	options.add_argument("-remote-debugging-port=9224")
+	options.add_argument("-headless")
+	options.add_argument("-disable-gpu")
+	options.add_argument("-no-sandbox")
+
+	binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
+
+	web = webdriver.Firefox(
+		firefox_binary=binary,
+		executable_path=os.environ.get('GECKODRIVER_PATH'),
+		options=options)
+
+	return firefox_driver
 web.get("https://www.udemy.com/")
 web.implicitly_wait(5)
 login_in = web.find_element_by_link_text("Log in").click()
