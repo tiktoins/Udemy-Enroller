@@ -29,12 +29,13 @@ def  load_driver():
 
 	binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
 
-	web = webdriver.Firefox(
+	firefox_driver = webdriver.Firefox(
 		firefox_binary=binary,
 		executable_path=os.environ.get('GECKODRIVER_PATH'),
 		options=options)
 
 	return firefox_driver
+web = webdriver.Firefox()
 web.get("https://www.udemy.com/")
 web.implicitly_wait(5)
 login_in = web.find_element_by_link_text("Log in").click()
